@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description>DFS</description>
+        <media_type/>
+        <name>hp_news</name>
+        <scoped_name>x_15871_dfs_ravi_hp_news</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>Ravi Chakraborty</sys_created_by>
+        <sys_created_on>2016-08-04 14:14:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>8231475d4f016200f5374ea18110c7b5</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>hp_news</sys_name>
+        <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
+        <sys_update_name>sys_ui_macro_8231475d4f016200f5374ea18110c7b5</sys_update_name>
+        <sys_updated_by>Ravi Chakraborty</sys_updated_by>
+        <sys_updated_on>2016-08-05 08:45:42</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g2:evaluate>
+	var gr = new GlideRecord("x_15871_dfs_ravi_msg_center");
+	gr.addQuery("type","message");
+	gr.query();
+	</g2:evaluate>
+	
+	<div id="header_msg">
+		<h3 style="float:left;padding-left:120px;margin-right: 1%;">Notifications and News</h3>
+		<j:if test="${gs.hasRole('admin')}">
+		<a href="/x_15871_dfs_ravi_msg_center_list.do?sysparm_query=type=message">
+			<img src="menu_list_bullet_link.png" style="float:left;padding-top: 10px;" title="edit news and messages..."/>
+		</a>
+		</j:if>
+	</div>
+	 <g:scrollable_area height="50px">
+		 <table>
+		 <j2:while test="$[gr.next()]">
+			<tr><td>
+			 $[gr.message]$[SP]
+				<a href="$[gr.link]" target="_blank">$[gr.link_label]</a>
+				<br/>
+			 </td></tr>
+		 </j2:while>
+			 </table>
+		 </g:scrollable_area>
+
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description>DFS</description>
+        <direct>false</direct>
+        <endpoint>x_15871_dfs_ravi_home_page.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<div align="center" style="float:left;width:48%;border:1px dotted black;padding-left:30px;" title="Notifications and News">
+		<g:inline template="x_15871_dfs_ravi_hp_news.xml"/>
+</div>
+<div align="center" style="float:right;width:48%;padding-right:30px;border:1px dotted black;" title="Self-Help Article">
+	<g:inline template="x_15871_dfs_ravi_hp_article.xml"/>
+</div>
+	
+	<div align="left" style="padding-top:100px;padding-left:30px;float:left;width:48%;" title="Categories">
+	<g:inline template="x_15871_dfs_ravi_hp_category.xml"/>
+</div>
+	
+	<div align="left" style="padding-top:40px;padding-left:70px;float:left;width:48%;" title="Categories">
+	<g:inline template="x_15871_dfs_ravi_hp_category_v2.xml"/>
+</div>
+
+</j:jelly>]]></html>
+        <name>home_page</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>Ravi Chakraborty</sys_created_by>
+        <sys_created_on>2016-08-04 14:16:15</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>fb12cb5d4f016200f5374ea18110c748</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>home_page</sys_name>
+        <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
+        <sys_update_name>sys_ui_page_fb12cb5d4f016200f5374ea18110c748</sys_update_name>
+        <sys_updated_by>Ravi Chakraborty</sys_updated_by>
+        <sys_updated_on>2016-08-05 08:46:32</sys_updated_on>
+    </sys_ui_page>
+</record_update>

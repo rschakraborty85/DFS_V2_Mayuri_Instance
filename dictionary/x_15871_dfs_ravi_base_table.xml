@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Base Table" max_length="40" name="x_15871_dfs_ravi_base_table" type="collection">
+        <element choice="1" label="Category" max_length="40" name="category" type="choice">
+            <choice>
+                <element label="Account Payable" value="x_15871_dfs_ravi_base_table"/>
+                <element label="Time &amp; Entry" value="x_15871_dfs_ravi_base_table"/>
+            </choice>
+        </element>
+    </element>
+</database>

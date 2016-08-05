@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description>DFS</description>
+        <media_type/>
+        <name>hp_category_v2</name>
+        <scoped_name>x_15871_dfs_ravi_hp_category_v2</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>Ravi Chakraborty</sys_created_by>
+        <sys_created_on>2016-08-05 07:51:25</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>b0f3b6694f056200f5374ea18110c75a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>hp_category_v2</sys_name>
+        <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
+        <sys_update_name>sys_ui_macro_b0f3b6694f056200f5374ea18110c75a</sys_update_name>
+        <sys_updated_by>Ravi Chakraborty</sys_updated_by>
+        <sys_updated_on>2016-08-05 08:14:25</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<h3>Choose Category v2</h3>
+	<!--iframe frameBorder="0" scrolling="no" src="wizard_view.do?sys_target=demo&amp;sysparm_stack=demo_list.do&amp;sysparm_wizardAction=sysverb_new&amp;sysparm_parent=2f6097514f416200f5374ea18110c747"/-->
+	<!--g:ui_choicelist name="category" table="x_15871_dfs_ravi_base_table" field="category"/-->
+	<g2:evaluate>
+		var gr = new GlideRecord("sys_choice");
+		gr.addEncodedQuery("name=x_15871_dfs_ravi_base_table^element=category^inactive=false");
+		gr.query();
+		</g2:evaluate>
+	<br/>
+	<j2:while test="$[gr.next()]">
+		<g2:evaluate>
+			//gs.getProperty("instance_name")+".service-now.com/"+
+			var link = gr.value+".do?sys_id=-1";
+		</g2:evaluate>
+		<a href="$[link]">$[gr.label]</a><br/>
+		</j2:while>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>
