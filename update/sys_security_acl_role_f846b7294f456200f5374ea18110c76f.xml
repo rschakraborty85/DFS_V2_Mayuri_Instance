@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>rsc</sys_created_by>
+        <sys_created_on>2016-08-05 12:41:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f846b7294f456200f5374ea18110c76f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_15871_dfs_ravi_hint_message_control.x_15871_dfs_ravi_hint_message_control_user</sys_name>
+        <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
+        <sys_security_acl display_value="x_15871_dfs_ravi_hint_message_control">fc46b7294f456200f5374ea18110c76e</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_f846b7294f456200f5374ea18110c76f</sys_update_name>
+        <sys_updated_by>rsc</sys_updated_by>
+        <sys_updated_on>2016-08-05 12:41:09</sys_updated_on>
+        <sys_user_role display_value="x_15871_dfs_ravi_hint_message_control_user" name="x_15871_dfs_ravi_hint_message_control_user">a846b7294f456200f5374ea18110c76b</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

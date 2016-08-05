@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description>DFS</description>
+        <media_type/>
+        <name>form_hint</name>
+        <scoped_name>x_15871_dfs_ravi_form_hint</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>rsc</sys_created_by>
+        <sys_created_on>2016-08-05 13:10:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f5ecffad4f456200f5374ea18110c76a</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>form_hint</sys_name>
+        <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
+        <sys_update_name>sys_ui_macro_f5ecffad4f456200f5374ea18110c76a</sys_update_name>
+        <sys_updated_by>rsc</sys_updated_by>
+        <sys_updated_on>2016-08-05 17:03:23</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	<script>
+		document.observe("dom:loaded", function() {
+			var elem = "sys_original."+g_form.getTableName()+".category";
+			elem.observe('onchange',handler);
+			
+		function handler(){
+			alert('changed');
+			var ajax = new GlideAjax("x_15871_dfs_ravi.DFSUtilAjax");
+			ajax.addParam("sysparm_name","getHint");
+			ajax.addParam("sysparm_element_name","category");
+			ajax.addParam("sysparm_element_value",g_form.getValue("category"));
+			ajax.getXML(callback);
+		
+			function callback(resp){
+				var hint = resp.responseXML.documentElement.getAttribute("answer");
+				$(elem).up().writeAttribute("title", hint);
+			}
+		}
+		});
+		</script>
+	    
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

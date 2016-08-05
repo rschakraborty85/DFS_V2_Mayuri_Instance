@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_documentation element="category" label="Category 1" language="en" table="x_15871_dfs_ravi_base_table">
+    <sys_documentation element="category" label="What is the issue" language="en" table="x_15871_dfs_ravi_payroll">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>category</element>
             <help/>
-            <hint>this is a hint - oob</hint>
-            <label>Category 1</label>
+            <hint/>
+            <label>What is the issue</label>
             <language>en</language>
-            <name>x_15871_dfs_ravi_base_table</name>
-            <plural>Categories 1</plural>
+            <name>x_15871_dfs_ravi_payroll</name>
+            <plural>What are the issues</plural>
             <sys_class_name>sys_documentation</sys_class_name>
-            <sys_created_by>Ravi Chakraborty</sys_created_by>
-            <sys_created_on>2016-08-04 15:26:01</sys_created_on>
+            <sys_created_by>rsc</sys_created_by>
+            <sys_created_on>2016-08-05 11:23:06</sys_created_on>
             <sys_customer_update>true</sys_customer_update>
-            <sys_id>566257914f416200f5374ea18110c775</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_name>Category 1</sys_name>
+            <sys_id>a16467294f456200f5374ea18110c794</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>What is the issue</sys_name>
             <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
-            <sys_update_name>sys_documentation_x_15871_dfs_ravi_base_table_category_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_15871_dfs_ravi_payroll_category_en</sys_update_name>
             <sys_updated_by>rsc</sys_updated_by>
-            <sys_updated_on>2016-08-05 16:10:47</sys_updated_on>
+            <sys_updated_on>2016-08-05 11:23:06</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

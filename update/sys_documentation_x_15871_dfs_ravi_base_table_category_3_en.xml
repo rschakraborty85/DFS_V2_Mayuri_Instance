@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="category_3" label="Category 3" language="en" table="x_15871_dfs_ravi_base_table">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>category_3</element>
+            <help/>
+            <hint/>
+            <label>Category 3</label>
+            <language>en</language>
+            <name>x_15871_dfs_ravi_base_table</name>
+            <plural>Category 3s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rsc</sys_created_by>
+            <sys_created_on>2016-08-05 11:20:20</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>45c327294f456200f5374ea18110c79a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Category 3</sys_name>
+            <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
+            <sys_update_name>sys_documentation_x_15871_dfs_ravi_base_table_category_3_en</sys_update_name>
+            <sys_updated_by>rsc</sys_updated_by>
+            <sys_updated_on>2016-08-05 11:20:20</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

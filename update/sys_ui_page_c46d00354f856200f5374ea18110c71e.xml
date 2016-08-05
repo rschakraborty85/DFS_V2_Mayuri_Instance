@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_15871_dfs_ravi_hintPopUp.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<!--g:requires name="x_15871_dfs_ravi.hintCssMin.jsdbx" /--> 
+	<link href="a22ec0354f856200f5374ea18110c779.cssdbx?" rel="stylesheet" type="text/css" />
+Hello Sir, <span class="hint--bottom" aria-label="Thank you!">hover over me.</span>
+
+</j:jelly>]]></html>
+        <name>hintPopUp</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>rsc</sys_created_by>
+        <sys_created_on>2016-08-05 14:23:01</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c46d00354f856200f5374ea18110c71e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>hintPopUp</sys_name>
+        <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
+        <sys_update_name>sys_ui_page_c46d00354f856200f5374ea18110c71e</sys_update_name>
+        <sys_updated_by>rsc</sys_updated_by>
+        <sys_updated_on>2016-08-05 15:44:15</sys_updated_on>
+    </sys_ui_page>
+</record_update>

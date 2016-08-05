@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_15871_dfs_ravi.DFSUtilAjax</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>DFSUtilAjax</name>
+        <script><![CDATA[var DFSUtilAjax = Class.create();
+DFSUtilAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getHint: function(){
+// 		gs.info("hint:"+hint);
+		var element = this.getParameter("sysparm_element_name");
+		var value = this.getParameter("sysparm_element_value");
+		var msg = new GlideRecord("x_15871_dfs_ravi_hint_message_control");
+		var query = "element="+element;
+		query += "^value"+value;
+		msg.addEncodedQuery(query);
+		msg.query();
+		var hint = "";
+		if(msg.next()){
+			hint = msg.hint;
+		}
+// 		gs.info("hint:"+hint);
+		return hint;
+	},
+	type: 'DFSUtilAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>rsc</sys_created_by>
+        <sys_created_on>2016-08-05 14:21:54</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f87ac0f14f856200f5374ea18110c760</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>DFSUtilAjax</sys_name>
+        <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
+        <sys_update_name>sys_script_include_f87ac0f14f856200f5374ea18110c760</sys_update_name>
+        <sys_updated_by>rsc</sys_updated_by>
+        <sys_updated_on>2016-08-05 16:48:39</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_15871_dfs_ravi_base_table" label="Payroll" max_length="40" name="x_15871_dfs_ravi_payroll" type="collection"/>
+</database>

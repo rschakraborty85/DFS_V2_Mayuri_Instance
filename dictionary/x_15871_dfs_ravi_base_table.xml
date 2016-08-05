@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Base Table" max_length="40" name="x_15871_dfs_ravi_base_table" type="collection">
-        <element choice="1" label="Category" max_length="40" name="category" type="choice">
+        <element choice="1" hint="this is a hint - oob" label="Category 1" max_length="40" name="category" type="choice">
             <choice>
                 <element label="Account Payable" value="x_15871_dfs_ravi_base_table"/>
                 <element label="Time &amp; Entry" value="x_15871_dfs_ravi_base_table"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Category 2" max_length="40" name="category_2" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Category 3" max_length="40" name="category_3" type="string">
+            <choice/>
+        </element>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
     </element>
 </database>

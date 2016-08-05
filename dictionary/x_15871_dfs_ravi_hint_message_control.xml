@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Hint Message Control" max_length="40" name="x_15871_dfs_ravi_hint_message_control" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Element" max_length="100" name="element" type="string"/>
+        <element label="Hint" max_length="1000" name="hint" type="string"/>
+        <element label="Value" max_length="100" name="value" type="string"/>
+    </element>
+</database>

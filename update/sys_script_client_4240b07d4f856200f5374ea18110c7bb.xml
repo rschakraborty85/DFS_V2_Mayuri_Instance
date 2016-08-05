@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description/>
+        <description>DFS</description>
         <field>category</field>
         <global>true</global>
         <messages/>
-        <name>pop up sample</name>
+        <name>hint sample</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-	if (isLoading || newValue === '') {
+	if (isLoading) {
 		return;
 	}
-	var url = "https://dev17773.service-now.com/x_15871_dfs_ravi_base_table_list.do";
-	var title = "some_title";
-	var width = 500;
-	var height = 400;
-	openPopUp(url, title, width, height);
-}
-
-function openPopUp(url, title, width, height){
-	var left = (screen.width/2)-width/2;
-	var top = (screen.height/2)-height/2;
-	var newwindow=window.open(url,title,"height="+height+",width="+width+",left="+left+",top="+top);
+	var elem = "sys_original."+g_form.getTableName()+".category";
+	if(newValue === ''){
+		$(elem).up().writeAttribute("title", "");
+		return;
+	}
+	var ajax = new GlideAjax("x_15871_dfs_ravi.DFSUtilAjax");
+	ajax.addParam("sysparm_name","getHint");
+	ajax.addParam("sysparm_element_name","category");
+	ajax.addParam("sysparm_element_value",newValue);
+	ajax.getXML(callback);
+	
+	function callback(resp){
+		// 		var elem = "sys_original."+g_form.getTableName()+".category";
+		var hint = resp.responseXML.documentElement.getAttribute("answer");
+		$(elem).up().writeAttribute("title", hint);
+	}
+	//Type appropriate comment here, and begin script below
+	
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
-        <sys_created_by>Ravi Chakraborty</sys_created_by>
-        <sys_created_on>2016-08-05 09:31:52</sys_created_on>
+        <sys_created_by>rsc</sys_created_by>
+        <sys_created_on>2016-08-05 16:56:14</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>028a0b214f456200f5374ea18110c7be</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>pop up sample</sys_name>
+        <sys_id>4240b07d4f856200f5374ea18110c7bb</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>hint sample</sys_name>
         <sys_overrides/>
         <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
-        <sys_update_name>sys_script_client_028a0b214f456200f5374ea18110c7be</sys_update_name>
+        <sys_update_name>sys_script_client_4240b07d4f856200f5374ea18110c7bb</sys_update_name>
         <sys_updated_by>rsc</sys_updated_by>
-        <sys_updated_on>2016-08-05 13:22:15</sys_updated_on>
+        <sys_updated_on>2016-08-05 17:27:13</sys_updated_on>
         <table>x_15871_dfs_ravi_base_table</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
