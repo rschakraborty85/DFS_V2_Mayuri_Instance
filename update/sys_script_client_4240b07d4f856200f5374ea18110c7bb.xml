@@ -7,31 +7,15 @@
         <description>DFS</description>
         <field>category</field>
         <global>true</global>
-        <messages/>
+        <messages>consider adding ajax to provide dynamism </messages>
         <name>hint sample</name>
         <order/>
-        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-	if (isLoading) {
-		return;
-	}
-	var elem = "sys_original."+g_form.getTableName()+".category";
-	if(newValue === ''){
-		$(elem).up().writeAttribute("title", "");
-		return;
-	}
-	var ajax = new GlideAjax("x_15871_dfs_ravi.DFSUtilAjax");
-	ajax.addParam("sysparm_name","getHint");
-	ajax.addParam("sysparm_element_name","category");
-	ajax.addParam("sysparm_element_value",newValue);
-	ajax.getXML(callback);
-	
-	function callback(resp){
-		// 		var elem = "sys_original."+g_form.getTableName()+".category";
-		var hint = resp.responseXML.documentElement.getAttribute("answer");
-		$(elem).up().writeAttribute("title", hint);
-	}
+        <script><![CDATA[function onLoad() {
 	//Type appropriate comment here, and begin script below
-	
+	var elem = "x_15871_dfs_ravi_base_table.category";
+	$(elem).childElements().each(function(el){
+		el.writeAttribute("title", "hints");
+	});
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>rsc</sys_created_by>
@@ -40,7 +24,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4240b07d4f856200f5374ea18110c7bb</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>hint sample</sys_name>
         <sys_overrides/>
         <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
@@ -49,9 +33,9 @@
         <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
         <sys_update_name>sys_script_client_4240b07d4f856200f5374ea18110c7bb</sys_update_name>
         <sys_updated_by>rsc</sys_updated_by>
-        <sys_updated_on>2016-08-05 17:27:13</sys_updated_on>
+        <sys_updated_on>2016-08-08 09:51:37</sys_updated_on>
         <table>x_15871_dfs_ravi_base_table</table>
-        <type>onChange</type>
+        <type>onLoad</type>
         <ui_type>0</ui_type>
         <view/>
     </sys_script_client>

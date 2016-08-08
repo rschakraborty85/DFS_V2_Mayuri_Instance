@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_ui_script">
     <sys_ui_script action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <description>DFS</description>
         <global>false</global>
         <name>x_15871_dfs_ravi.DFSUtilUIS</name>
@@ -9,30 +9,46 @@
 
 x_15871_dfs_ravi.DFSUtilUIS = (function() {
 	"use strict";
-
-/* set your private variables and functions here. For example: 
-	var privateVar = 0; 
-	function private_function() {
-		return ++privateVar;
+	
+	/* set your private variables and functions here. For example:
+	var privateVar = 0; */
+	function private_getHint(element) {
+		var elem = "sys_original."+g_form.getTableName()+"."+element;
+		if(newValue === ''){
+			$(elem).up().writeAttribute("title", "");
+			return;
+		}
+		var ajax = new GlideAjax("x_15871_dfs_ravi.DFSUtilAjax");
+		ajax.addParam("sysparm_name","getHint");
+		ajax.addParam("sysparm_element_name","category");
+		ajax.addParam("sysparm_element_value",newValue);
+		ajax.getXML(callback);
+		
+		function callback(resp){
+			// 		var elem = "sys_original."+g_form.getTableName()+".category";
+			var hint = resp.responseXML.documentElement.getAttribute("answer");
+			$(elem).up().writeAttribute("title", hint);
+		}
+		return ;
 	}
-*/
-
-/* Share variables between multiple UI scripts by adding them to your scope object. For example: 
-	x_15871_dfs_ravi.sharedVar = 0; 
-
- Then access them in your scripts the same way. For example: 
+	
+	
+	/* Share variables between multiple UI scripts by adding them to your scope object. For example:
+	x_15871_dfs_ravi.sharedVar = 0;
+	
+	Then access them in your scripts the same way. For example:
 	function get_shared() {
 		return x_15871_dfs_ravi.sharedVar;
 	}
-*/
-
+ 	*/
+	
 	return {
-
-/* set your public API here. For example:
-		incrementAndReturnPrivateVar: function() {
-			return private_function();
+		
+		/* set your public API here. For example:*/
+		getHint: function(element) {
+			return private_getHint(element);
 		},
-*/
+		
 		type:  "DFSUtilUIS"
 	};
 })();
@@ -43,7 +59,7 @@ x_15871_dfs_ravi.DFSUtilUIS = (function() {
         <sys_created_on>2016-08-05 17:26:59</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>0367b0fd4f856200f5374ea18110c79c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>x_15871_dfs_ravi.DFSUtilUIS</sys_name>
         <sys_package display_value="DFS_Ravi" source="x_15871_dfs_ravi">d84bbe994f016200f5374ea18110c7d8</sys_package>
         <sys_policy/>
@@ -51,7 +67,7 @@ x_15871_dfs_ravi.DFSUtilUIS = (function() {
         <sys_scope display_value="DFS_Ravi">d84bbe994f016200f5374ea18110c7d8</sys_scope>
         <sys_update_name>sys_ui_script_0367b0fd4f856200f5374ea18110c79c</sys_update_name>
         <sys_updated_by>rsc</sys_updated_by>
-        <sys_updated_on>2016-08-05 17:26:59</sys_updated_on>
+        <sys_updated_on>2016-08-05 17:49:04</sys_updated_on>
         <use_scoped_format>true</use_scoped_format>
     </sys_ui_script>
 </record_update>
